@@ -57,12 +57,15 @@ To make the web application faster and more secure, we place CloudFront in front
 
 ### 3.1 Create a Distribution
 1. Go to AWS Console → Search for **CloudFront** → **Create Distribution**.
-2. **Origin domain**: Select the endpoint of the S3 bucket you just created.
+2. **Origin domain**: Paste the **S3 Static Website Hosting Endpoint** (e.g., `pets-hop-frontend.s3-website-ap-southeast-1.amazonaws.com`) of the bucket you just created.
+   * *Note*: Do not select the default auto-suggested bucket API endpoint, as it may cause permission/routing issues.
 3. **Viewer protocol policy**: Select **Redirect HTTP to HTTPS** (Mandatory for security).
-4. **Web Application Firewall (WAF)**: Select **Enable security protections** to automatically block malicious requests.
-5. Click **Create distribution**.
+4. **Allowed HTTP methods**: Select **GET, HEAD**.
+5. **Cache policy**: Choose **CachingOptimized**.
+6. **Web Application Firewall (WAF)**: Select **Enable security protections** to automatically block malicious requests.
+7. Click **Create distribution**.
 
-![Create CloudFront](/images/5-Workshop/cloudfront-create.png)
+![Create CloudFront Distribution](/images/5-Workshop/cloudfront-create.png)
 
 ### 3.2 Get the Access URL
 After 3-5 minutes, CloudFront will finish deploying.

@@ -57,12 +57,15 @@ npm run build
 
 ### 3.1 Tạo Distribution
 1. Truy cập AWS Console → Tìm kiếm **CloudFront** → **Create Distribution**.
-2. **Origin domain**: Chọn endpoint của S3 bucket vừa tạo.
-3. **Viewer protocol policy**: Chọn **Redirect HTTP to HTTPS** (Bắt buộc dùng bảo mật HTTPS).
-4. **Web Application Firewall (WAF)**: Chọn **Enable security protections** để tự động chặn các request độc hại.
-5. Click **Create distribution**.
+2. **Origin domain**: Dán link **S3 Static Website Hosting Endpoint** (Ví dụ: `pets-hop-frontend.s3-website-ap-southeast-1.amazonaws.com`) của bucket vừa tạo.
+   * *Lưu ý*: Không chọn endpoint gợi ý tự động của S3 API để tránh gặp lỗi phân quyền hoặc định tuyến.
+3. **Viewer protocol policy**: Chọn **Redirect HTTP to HTTPS** (Bắt buộc để bảo mật).
+4. **Allowed HTTP methods**: Chọn **GET, HEAD**.
+5. **Cache policy**: Chọn **CachingOptimized**.
+6. **Web Application Firewall (WAF)**: Chọn **Enable security protections** để tự động chặn các request độc hại.
+7. Click **Create distribution**.
 
-![Create CloudFront](/images/5-Workshop/cloudfront-create.png)
+![Tạo CloudFront Distribution](/images/5-Workshop/cloudfront-create.png)
 
 ### 3.2 Lấy URL truy cập
 Sau khoảng 3-5 phút, CloudFront sẽ deploy xong. 
