@@ -69,21 +69,35 @@ nohup java -jar pet-resort-api.jar > app.log 2>&1 &
 ```
 At this point, your API is running on port `8080` attached to its Private IP (e.g., `10.0.1.15:8080`).
 
-#### Step 6: Configure Application Load Balancer (ALB)
+#### Step 6: Create a Target Group
 
-Since the EC2 instance resides in a Private Subnet, it cannot be accessed directly. We use an ALB in the Public Subnet to receive requests from the Frontend and forward them to the EC2 instance.
+Before configuring the Application Load Balancer, we must define the destination target group for the backend traffic.
+
+1. Go to **EC2 Console** → Select **Target Groups** in the left menu → Click **Create target group**.
+2. **Target type**: Select **Instances**.
+3. **Target group name**: `ALB-target-group`.
+4. **Protocol**: `HTTP` | **Port**: `80` (If you configure port 80, ensure you map the registered EC2 instance's port override to `8080` where Spring Boot is running).
+5. **VPC**: Select `Pet-Shop-vpc`.
+6. Click **Next** → Select the `petshop-backend-server` EC2 instance and register it → Click **Create target group**.
+
+![Target Group Configuration](/images/5-Workshop/target-group.png)
+
+#### Step 7: Configure Application Load Balancer (ALB)
+
+Since the EC2 instance resides in a Private Subnet, it cannot be accessed directly. We use an ALB in the Public Subnet to receive requests from the Frontend and forward them securely to the private backend.
 
 1. In the EC2 Console → Scroll down to **Load Balancers** → **Create Load Balancer**.
 2. Select **Application Load Balancer**.
 3. Scheme: **Internet-facing**
 4. Mapping: Select the `Pet-Shop-vpc` and at least 2 Public Subnets.
-5. **Listeners and routing:** 
-   - HTTP: 80 or HTTPS: 443
-   - Forward traffic to a Target Group containing the `petshop-backend-server` EC2 instance on port `8080`.
+5. **Listeners and routing**:
+   - HTTP: 80 or HTTPS: 443.
+   - **Default action**: Select **Forward to** and choose the `ALB-target-group` you just created.
+6. Click **Create load balancer**.
 
-![Target Group Configuration](/images/5-Workshop/target-group.png)
+![Load Balancer Configuration](/images/5-Workshop/alb-dns.png)
 
-#### Step 7: Configure CORS for the Frontend
+#### Step 8: Configure CORS for the Frontend
 
 To ensure the Frontend (ReactJS) can successfully call the API without browser blockages, you must configure CORS in your Spring Boot source code (typically in the `WebConfig` or `SecurityConfig` class):
 

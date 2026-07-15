@@ -69,21 +69,35 @@ nohup java -jar pet-resort-api.jar > app.log 2>&1 &
 ```
 Lúc này, API của bạn đã chạy trên cổng `8080` của địa chỉ Private IP (Ví dụ: `10.0.1.15:8080`).
 
-#### Bước 6: Cấu hình Application Load Balancer (ALB)
+#### Bước 6: Tạo Target Group (Nhóm đối tượng đích)
 
-Vì EC2 nằm ở Private Subnet không ai truy cập được, chúng ta dùng ALB đặt ở Public Subnet để "đứng mũi chịu sào" nhận request từ Frontend rồi đẩy vào EC2.
+Trước khi cấu hình bộ cân bằng tải Application Load Balancer, chúng ta cần định nghĩa nhóm đối tượng đích nhận traffic backend.
+
+1. Truy cập **EC2 Console** → Chọn **Target Groups** ở menu trái → Click **Create target group**.
+2. **Target type**: Chọn **Instances**.
+3. **Target group name**: `ALB-target-group`.
+4. **Protocol**: `HTTP` | **Port**: `80` (Nếu cấu hình port 80, đảm bảo rằng bạn override port nhận traffic của EC2 backend thành `8080` nơi Spring Boot đang chạy khi đăng ký target).
+5. **VPC**: Chọn `Pet-Shop-vpc`.
+6. Click **Next** → Chọn EC2 `petshop-backend-server` và đăng ký nó → Click **Create target group**.
+
+![Cấu hình Target Group](/images/5-Workshop/target-group.png)
+
+#### Bước 7: Cấu hình Application Load Balancer (ALB)
+
+Vì EC2 Backend nằm ở Private Subnet không ai truy cập được, chúng ta dùng ALB đặt ở Public Subnet để "đứng mũi chịu sào" nhận request công khai từ Frontend rồi đẩy an toàn vào EC2 ở subnet nội bộ.
 
 1. Vào EC2 Console → Kéo xuống mục **Load Balancers** → **Create Load Balancer**.
 2. Chọn **Application Load Balancer**.
 3. Scheme: **Internet-facing**
 4. Mapping: Chọn VPC `Pet-Shop-vpc` và ít nhất 2 Public Subnets.
-5. **Listeners and routing:** 
-   - HTTP: 80 hoặc HTTPS: 443
-   - Chuyển tiếp (Forward to) tới Target Group chứa EC2 `petshop-backend-server` cổng `8080`.
+5. **Listeners and routing**:
+   - HTTP: 80 hoặc HTTPS: 443.
+   - **Default action**: Chọn **Forward to** và trỏ tới Target Group `ALB-target-group` vừa tạo ở bước trên.
+6. Click **Create load balancer**.
 
-![Cấu hình Target Group](/images/5-Workshop/target-group.png)
+![Cấu hình Load Balancer](/images/5-Workshop/alb-dns.png)
 
-#### Bước 7: Cấu hình CORS cho Frontend
+#### Bước 8: Cấu hình CORS cho Frontend
 
 Để Frontend (ReactJS) có thể gọi được API mà không bị chặn, cần cấu hình CORS trong mã nguồn Spring Boot (thường nằm ở class `WebConfig` hoặc `SecurityConfig`):
 
