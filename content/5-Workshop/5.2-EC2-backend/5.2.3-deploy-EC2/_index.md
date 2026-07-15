@@ -81,6 +81,8 @@ Since the EC2 instance resides in a Private Subnet, it cannot be accessed direct
    - HTTP: 80 or HTTPS: 443
    - Forward traffic to a Target Group containing the `petshop-backend-server` EC2 instance on port `8080`.
 
+![Target Group Configuration](/images/5-Workshop/target-group.png)
+
 #### Step 7: Configure CORS for the Frontend
 
 To ensure the Frontend (ReactJS) can successfully call the API without browser blockages, you must configure CORS in your Spring Boot source code (typically in the `WebConfig` or `SecurityConfig` class):
@@ -93,7 +95,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins(
                     "http://localhost:3000", 
-                    "https://d1x2y3z4.cloudfront.net" // Real CloudFront domain
+                    "https://d3uvhesft661gl.cloudfront.net" // Real CloudFront domain
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

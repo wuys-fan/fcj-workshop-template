@@ -24,7 +24,7 @@ The API includes **Swagger UI** for easy documentation and testing:
 ```text
 ┌─────────────────────────────────────────────────────┐
 │           ReactJS Frontend (CloudFront / S3)        │
-│           (https://d1x2y3z4.cloudfront.net/)       │
+│           (https://d3uvhesft661gl.cloudfront.net/) │
 └──────────────────┬──────────────────────────────────┘
                    │ HTTPS API Calls
                    ▼

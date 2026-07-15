@@ -81,6 +81,8 @@ Vì EC2 nằm ở Private Subnet không ai truy cập được, chúng ta dùng 
    - HTTP: 80 hoặc HTTPS: 443
    - Chuyển tiếp (Forward to) tới Target Group chứa EC2 `petshop-backend-server` cổng `8080`.
 
+![Cấu hình Target Group](/images/5-Workshop/target-group.png)
+
 #### Bước 7: Cấu hình CORS cho Frontend
 
 Để Frontend (ReactJS) có thể gọi được API mà không bị chặn, cần cấu hình CORS trong mã nguồn Spring Boot (thường nằm ở class `WebConfig` hoặc `SecurityConfig`):
@@ -93,7 +95,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins(
                     "http://localhost:3000", 
-                    "https://d1x2y3z4.cloudfront.net" // Domain thật của CloudFront Frontend
+                    "https://d3uvhesft661gl.cloudfront.net" // Domain thật của CloudFront Frontend
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

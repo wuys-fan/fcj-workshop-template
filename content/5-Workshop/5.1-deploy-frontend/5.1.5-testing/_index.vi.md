@@ -21,9 +21,9 @@ pre: " <b> 5.1.5 </b> "
 
 Kiểm tra các URLs (thay bằng CloudFront Domain của bạn):
 ```text
-[https://d1x2y3z4.cloudfront.net/](https://d1x2y3z4.cloudfront.net/)
-[https://d1x2y3z4.cloudfront.net/services](https://d1x2y3z4.cloudfront.net/services)
-[https://d1x2y3z4.cloudfront.net/login](https://d1x2y3z4.cloudfront.net/login)
+[https://d3uvhesft661gl.cloudfront.net/](https://d3uvhesft661gl.cloudfront.net/)
+[https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung](https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung)
+[https://d3uvhesft661gl.cloudfront.net/login](https://d3uvhesft661gl.cloudfront.net/login)
 ```
 
 Refresh mỗi trang con → Không bị lỗi 404 ✅
