@@ -21,9 +21,9 @@ pre: " <b> 5.1.5 </b> "
 
 Check the following URLs (replace with your CloudFront Domain):
 ```text
-[https://d1x2y3z4.cloudfront.net/](https://d1x2y3z4.cloudfront.net/)
-[https://d1x2y3z4.cloudfront.net/services](https://d1x2y3z4.cloudfront.net/services)
-[https://d1x2y3z4.cloudfront.net/login](https://d1x2y3z4.cloudfront.net/login)
+[https://d3uvhesft661gl.cloudfront.net/](https://d3uvhesft661gl.cloudfront.net/)
+[https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung](https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung)
+[https://d3uvhesft661gl.cloudfront.net/login](https://d3uvhesft661gl.cloudfront.net/login)
 ```
 
 Refresh each sub-page → No 404 error ✅

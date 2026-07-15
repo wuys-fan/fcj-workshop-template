@@ -69,7 +69,9 @@ npm run build
 
 ### 3.2 Lấy URL truy cập
 Sau khoảng 3-5 phút, CloudFront sẽ deploy xong. 
-Bạn copy đường dẫn tại cột **Distribution domain name** (Ví dụ: `d1x2y3z4.cloudfront.net`) và truy cập trên trình duyệt để kiểm tra web.
+Bạn copy đường dẫn tại cột **Distribution domain name** (Ví dụ: `d3uvhesft661gl.cloudfront.net`) và truy cập trên trình duyệt để kiểm tra web. Bạn cũng có thể truy cập các đường dẫn cụ thể để kiểm tra trang con (Ví dụ: `https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung`).
+
+![Giao diện Pet Resort trên CloudFront](/images/5-Workshop/cloudfront-domain.png)
 
 ---
 

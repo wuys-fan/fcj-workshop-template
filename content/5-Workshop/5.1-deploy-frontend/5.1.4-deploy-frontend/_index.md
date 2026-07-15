@@ -69,7 +69,9 @@ To make the web application faster and more secure, we place CloudFront in front
 
 ### 3.2 Get the Access URL
 After 3-5 minutes, CloudFront will finish deploying.
-Copy the URL under **Distribution domain name** (e.g., `d1x2y3z4.cloudfront.net`) and paste it into your browser to test the website.
+Copy the URL under **Distribution domain name** (e.g., `d3uvhesft661gl.cloudfront.net`) and paste it into your browser to test the website. You can also append specific routes to test sub-pages (e.g., `https://d3uvhesft661gl.cloudfront.net/services/tam-spa-thu-cung`).
+
+![Pet Resort Website on CloudFront](/images/5-Workshop/cloudfront-domain.png)
 
 ---
 
