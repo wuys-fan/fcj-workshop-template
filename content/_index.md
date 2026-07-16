@@ -4,31 +4,20 @@ weight: 1
 chapter: false
 ---
 
-    
 # Nguyen Hoang Son Internship Report
 
-
-
 ### Student Information:
-&emsp; **Họ và tên:** Nguyễn Hoàng Sơn
-
-&emsp; **Số điện thoại:** 0961346562
-
+&emsp; **Full Name:** Nguyễn Hoàng Sơn
+&emsp; **Phone Number:** 0961346562
 &emsp; **Email:** nguyenhson692@gmail.com
+&emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
+&emsp; **Major:** Information Technology
+&emsp; **Student ID:** 2280602754
+&emsp; **Internship Company:** Amazon Web Services Vietnam LLC.
+&emsp; **Internship Position:** FCJ Cloud Intern
+&emsp; **Internship Period:** From April 17, 2026 to July 10, 2026
 
-&emsp; **Trường:** Đại học công nghệ TP.HCM (HUTECH)
-
-&emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Mã sinh viên:** 2280602754
-
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
-
-&emsp; **Vị trí thực tập:** FCJ Cloud Intern
-
-&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 10/07/2026
-
-![Ảnh đại diện của bạn](/images/HoangSOn.jpg)
+![Profile Picture](/images/HoangSOn.jpg)
 
 ### Report Content
 

@@ -29,14 +29,22 @@ The company provides an internship allowance and offers flexible working hours w
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+### Other questions
+- **What were you most satisfied with during your internship?**  
+  What satisfied me the most was the opportunity to directly participate in deploying real-world systems on the cloud platform, which helped me turn theoretical knowledge from school into concrete practical skills. The dedicated guidance from the mentors also gave me much more confidence when handling new technical problems.
 
----
+- **What do you think the company needs to improve for future interns?**  
+  I think the program could consider adding a comprehensive guideline covering core processes and tools right from the first onboarding week. This would help future interns easily get accustomed to and catch up with the work much faster.
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+- **If you were to introduce it to your friends, would you recommend they intern here? Why?**  
+  Absolutely yes. This is an ideal environment for students to gain hands-on experience, learn standard product development processes, and build a solid foundation for their future software engineering career paths.
+
+### Proposals & Expectations
+- **Do you have any proposals to improve the experience during the internship?**  
+  I suggest organizing more short, periodic mini-workshops or tech-sharing sessions. This not only helps everyone expand their professional knowledge beyond their current projects but also creates a space for interns to connect and exchange ideas with each other.
+
+- **Would you like to continue with this program in the future?**  
+  Yes, I would very much like to continue accompanying or participating in FCJ's future programs if given the opportunity, as this internship has brought me immense practical value.
+
+- **Other feedback (feel free to share):**  
+  I would like to send my sincere thanks to the mentors, the admin team, and the FCJ organizing committee. Thank you everyone for always being patient, supportive, and creating such a fulfilling and meaningful internship experience.
