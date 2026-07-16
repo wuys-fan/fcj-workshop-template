@@ -44,8 +44,8 @@ pre: " <b> 4.1. </b> "
 - Giao lưu trực tiếp với các diễn giả và bế mạc sự kiện.
 
 ### Diễn giả
-- **Vinh Trần** - Senior Sysadmin / System Engineer
-- **Trương Phước** - Chuyên gia phát triển phần mềm & Quản lý dự án
+- **Vinh Trần** - Junior Sysadmin / student , fresher IT helpdesk 
+- **Trương Phước** - phát triển phần mềm & Quản lý dự án
 - **Bảo Huỳnh** - Cloud & DevOps Engineer
 - **Lê Hoàng Gia Đại** - Cloud Security Specialist
 - **Việt Phát** - Data & Cloud Architect
@@ -123,7 +123,7 @@ Tham gia sự kiện công nghệ ngày 6/6/2026 thực sự là một trải ng
 #### Bài học rút ra
 - Công nghệ liên tục thay đổi (từ máy chủ vật lý sang Cloud, từ SQL sang Graph DB, từ cấu hình Firewall thủ công sang AI/ML). Để không bị bỏ lại phía sau, bản thân phải liên tục cập nhật kiến thức, đồng thời xây dựng một môi trường làm việc nhóm vững chắc để cùng nhau phát triển.
 
-#### Một số hình ảnh khi tham gia sự kiện
-*(Chèn hình ảnh check-in, hình ảnh các slide thuyết trình của diễn giả hoặc ảnh chụp chung cùng cộng đồng tại đây)*
+![Vinh Trần - Từ IT Helpdesk lên Senior Sysadmin](/images/4-EventParticipated/event1-1.png)
+![Kiến trúc AWS cho Godot Game Server](/images/4-EventParticipated/event1-2.png)
 
 > Tổng thể, sự kiện không chỉ cung cấp những kiến thức kỹ thuật chuyên sâu trên nền tảng AWS mà còn tiếp thêm năng lượng, truyền cảm hứng mạnh mẽ cho hành trình phát triển sự nghiệp kỹ sư phần mềm và Cloud của tôi.

@@ -122,7 +122,7 @@ Attending the tech event on June 6, 2026, was an eye-opening experience, providi
 #### Lessons Learned
 - Technology changes continuously (from physical servers to Cloud, from SQL to Graph DB, from manual Firewall configs to AI/ML). To avoid being left behind, I must constantly update my knowledge while building a solid teamwork environment to grow together.
 
-#### Event Photos
-*(Insert check-in photos, speakers' presentation slides, or community group photos here)*
+![Vinh Tran - From IT Helpdesk to Senior Sysadmin](/images/4-EventParticipated/event1-1.png)
+![AWS Architecture for Godot Game Server](/images/4-EventParticipated/event1-2.png)
 
 > Overall, the event not only provided deep technical knowledge on the AWS platform but also energized and strongly inspired my journey to develop a career as a Software and Cloud Engineer.

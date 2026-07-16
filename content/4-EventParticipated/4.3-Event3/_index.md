@@ -84,4 +84,4 @@ Participating in this intensive 3-hour morning session gave me a profound awaken
 - This event provided not only knowledge about Cloud/Data but also hard-earned lessons on attitude, perseverance, and how to survive and thrive in the modern tech world.
 
 #### Event Photos
-*(Add check-in photos, speaker slides, or livestream screenshots here)*
+![AWS Presentation on Talent and Infrastructure Investment](/images/4-EventParticipated/event3-1.png)
