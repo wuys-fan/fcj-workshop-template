@@ -72,9 +72,7 @@ Bây giờ bạn cần cập nhật URL Backend mới cho Frontend.
 VITE_API_URL=http://petshop-alb-123456789.ap-southeast-1.elb.amazonaws.com/api
 ```
 
-![Update React Environment](/images/5-Workshop/frontend-env.png)
-
-4. Lưu file, commit code và push lên GitHub để hệ thống CI/CD tự động deploy bản cập nhật lên S3/CloudFront.
+4. Cấu hình lại file biến môi trường, lưu file, commit code và push lên GitHub để hệ thống CI/CD tự động deploy bản cập nhật lên S3/CloudFront.
 
 ## Bước 5: Kiểm tra lỗi CORS & Mixed Content
 

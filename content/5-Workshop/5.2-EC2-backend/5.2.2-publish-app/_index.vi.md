@@ -16,8 +16,6 @@ Sử dụng tổ hợp phím `` Ctrl + ` `` (hoặc vào menu **Terminal** → *
 
 Đảm bảo terminal đang trỏ đúng vào thư mục gốc của dự án (nơi chứa file `pom.xml`).
 
-![Mở Terminal trong VS Code](/images/5-Workshop/build-backend-1.png)
-
 #### Bước 2: Build dự án bằng Maven
 
 Tại màn hình Terminal của VS Code, gõ lệnh sau để dọn dẹp các bản build cũ, biên dịch mã nguồn mới và đóng gói. Chúng ta sử dụng cờ `-DskipTests` để bỏ qua các bài test cục bộ, giúp quá trình build diễn ra nhanh chóng hơn:

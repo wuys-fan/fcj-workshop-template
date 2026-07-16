@@ -16,8 +16,6 @@ Press `` Ctrl + ` `` (or navigate to **Terminal** → **New Terminal** in the to
 
 Ensure the terminal is pointing to the root directory of your project (where the `pom.xml` file is located).
 
-![Open Terminal in VS Code](/images/5-Workshop/build-backend-1.png)
-
 #### Step 2: Build the project using Maven
 
 In the VS Code Terminal, enter the following command to clean old builds, compile new source code, and package the application. We use the `-DskipTests` flag to bypass local testing, significantly speeding up the build process:

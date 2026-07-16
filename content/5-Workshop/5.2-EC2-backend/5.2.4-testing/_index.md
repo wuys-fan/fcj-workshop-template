@@ -72,8 +72,6 @@ Now, update the new Backend URL in your Frontend application.
 VITE_API_URL=http://petshop-alb-123456789.ap-southeast-1.elb.amazonaws.com/api
 ```
 
-![Update React Environment](/images/5-Workshop/frontend-env.png)
-
 4. Save the file, commit the changes, and push to GitHub to trigger your CI/CD pipeline and update the S3/CloudFront deployment.
 
 ## Step 5: Troubleshoot CORS & Mixed Content
