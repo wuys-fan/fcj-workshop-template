@@ -5,7 +5,7 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-This worklog documents a 12-week internship journey at **AWS First Cloud Journey** (April - July 2026). Throughout this period, our team built and deployed the **Pet Resort & Care System** — a web application combining pet e-commerce and spa booking — onto the AWS Cloud platform.
+This worklog documents a 13-week internship journey at **AWS First Cloud Journey** (April - July 2026). Throughout this period, our team built and deployed the **Pet Resort & Care System** — a web application combining pet e-commerce and spa booking — onto the AWS Cloud platform.
 
 **Week 1:** [Getting familiar with AWS, account setup & Hugo environment](1.1-week1/)
 
@@ -30,3 +30,5 @@ This worklog documents a 12-week internship journey at **AWS First Cloud Journey
 **Week 11:** [Architecture finalization & full cloud deployment](1.11-week11/)
 
 **Week 12:** [Load testing, monitoring setup, FinOps & project wrap-up](1.12-week12/)
+
+**Week 13:** [Cloud bug fixes, report finalization & final defense](1.13-week13/)
