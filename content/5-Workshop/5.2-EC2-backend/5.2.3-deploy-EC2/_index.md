@@ -125,17 +125,26 @@ public class CorsConfig implements WebMvcConfigurer {
 
 #### Step 9: Configure Launch Template & Auto Scaling Group for Backend (High Availability)
 
-To ensure the system runs stably at scale, automatically recovers from server failures, and balances traffic across Private Subnets, we create a Launch Template and configure an Auto Scaling Group for the Backend servers.
+To ensure the system runs stably at scale, automatically recovers from server failures, and balances traffic across Private Subnets, we create a machine image (AMI) from the EC2 Backend instance, then create a Launch Template and configure an Auto Scaling Group.
 
-1. **Create a Launch Template:**
+1. **Create an Amazon Machine Image (AMI) from EC2 Backend:**
+   - Go to **EC2 Console** → Select **Instances** → Select your `petshop-backend-server` instance.
+   - Click **Actions** → **Image and templates** → **Create image**.
+   - **Image name**: `pet-shop-backend-AMI`.
+   - Click **Create image**. The status will become `Available` after the image creation completes.
+   
+   ![Create Amazon Machine Image](/images/5-Workshop/backend-ami.png)
+
+2. **Create a Launch Template:**
    - Go to **EC2 Console** → Select **Launch Templates** in the left menu → Click **Create launch template**.
    - **Launch template name**: `petshop-launch-template`.
-   - Select the AMI, Instance type (`t3.micro`), Key pair, and Security Group `SG_Backend` exactly as configured manually in Step 2.
+   - **Application and OS Images (Amazon Machine Image)**: Under the **My AMIs** tab, select the `pet-shop-backend-AMI` you created.
+   - Select the Instance type (`t3.micro`), Key pair, and Security Group `SG_Backend` exactly as configured manually in Step 2.
    - Click **Create launch template**.
    
    ![Launch Template Configuration](/images/5-Workshop/launch-template.png)
 
-2. **Configure the Auto Scaling Group (ASG):**
+3. **Configure the Auto Scaling Group (ASG):**
    - Go to **EC2 Console** → Select **Auto Scaling Groups** in the left menu → Click **Create Auto Scaling group**.
    - **Auto Scaling group name**: `petshop-backend-autoscaling`.
    - **Launch template**: Select the `petshop-launch-template` you just created.

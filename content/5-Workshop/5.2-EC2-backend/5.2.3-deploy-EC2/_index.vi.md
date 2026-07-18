@@ -125,17 +125,26 @@ public class CorsConfig implements WebMvcConfigurer {
 
 #### Bước 9: Thiết lập Launch Template & Auto Scaling Group cho Backend (Tối ưu hóa khả dụng)
 
-Để hệ thống hoạt động ổn định ở quy mô lớn, tự động phục hồi khi máy chủ gặp sự cố và phân phối tải đều giữa các Private Subnets, chúng ta tạo Launch Template và thiết lập Auto Scaling Group cho các máy chủ Backend.
+Để hệ thống hoạt động ổn định ở quy mô lớn, tự động phục hồi khi máy chủ gặp sự cố và phân phối tải đều giữa các Private Subnets, chúng ta tạo bản sao hình ảnh máy ảo (AMI) từ EC2 Backend hiện tại, sau đó tạo Launch Template và thiết lập Auto Scaling Group.
 
-1. **Tạo Launch Template (Bản mẫu cấu hình khởi chạy):**
+1. **Tạo Amazon Machine Image (AMI) từ EC2 Backend:**
+   - Vào **EC2 Console** → Chọn **Instances** → Tích chọn instance `petshop-backend-server`.
+   - Chọn **Actions** → **Image and templates** → **Create image**.
+   - **Image name**: `pet-shop-backend-AMI`.
+   - Click **Create image**. Trạng thái của AMI sẽ chuyển sang `Available` sau khi quá trình tạo hoàn tất.
+   
+   ![Tạo Amazon Machine Image](/images/5-Workshop/backend-ami.png)
+
+2. **Tạo Launch Template (Bản mẫu cấu hình khởi chạy):**
    - Vào **EC2 Console** → Chọn **Launch Templates** ở menu trái → Click **Create launch template**.
    - **Launch template name**: `petshop-launch-template`.
-   - Chọn AMI, Instance type (`t3.micro`), Key pair, và Security Group `SG_Backend` giống như đã thiết lập thủ công ở Bước 2.
+   - **Application and OS Images (Amazon Machine Image)**: Ở mục **My AMIs**, chọn `pet-shop-backend-AMI` vừa tạo ở trên.
+   - Chọn Instance type (`t3.micro`), Key pair, và Security Group `SG_Backend` giống như đã thiết lập thủ công ở Bước 2.
    - Nhấp **Create launch template**.
    
    ![Cấu hình Launch Template](/images/5-Workshop/launch-template.png)
 
-2. **Cấu hình Auto Scaling Group (ASG):**
+3. **Cấu hình Auto Scaling Group (ASG):**
    - Vào **EC2 Console** → Chọn **Auto Scaling Groups** ở menu trái → Click **Create Auto Scaling group**.
    - **Auto Scaling group name**: `petshop-backend-autoscaling`.
    - **Launch template**: Chọn `petshop-launch-template` vừa tạo.
